@@ -7,12 +7,16 @@
     <link rel="stylesheet" type="text/css"
     href="style.css">
 </head>
-<body>
+<body onload="nimi()">
     <h1>Slot machine</h1>
 
-    <h2>Pelaaja: <span id="name"> </span> </h2>
-<button type="button" onclick="myFunction()">Spin Here!</button>
-<p id="demo"></p>
+    <h2 id="name"></h2>
+    <p id="pisteet"></p>
+<button type="button" onclick="spin()">Spin Here!</button>
+<p id="f1"></p>
+<p id="f2"></p>
+<p id="f3"></p>
+<p id="f4"></p>
 <script src="game.js"></script> 
 </body>
 </html>
