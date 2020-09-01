@@ -4,6 +4,7 @@ var f3 = document.querySelector("#f3");
 var f4 = document.querySelector("#f4");
 var nameblock = document.querySelector("#name");
 var pistenäyttö = document.querySelector("#pisteet");
+var panos = document.querySelector("#panos")
 
 let playerName= "";
 let numero1 = "";
@@ -17,7 +18,14 @@ let lockvalue1 = "0";
 let lockvalue2 = "0";
 let lockvalue3 = "0";
 let lockvalue4 = "0";
-
+let bet = panos.innerText;
+let num = 0;
+setInterval(function(){ console.log(num); }, 1000);
+onclick = betupdater()
+onkeyup = betupdater()
+function betupdater() {
+    let num = panos.value;
+}
 
 function locking1() {
     lockvalue1 = "1";
