@@ -1,6 +1,12 @@
 let playerName= "";
+let numero1 = "";
+let points = "50";
 
-function beginGame(){
-playerName = prompt('Anna nimesi');
-document.getElementById('name').innerHTML = player;
+
+function myFunction() {
+    numero1 = Math.floor((Math.random() * 4) + 1);
+    document.getElementById("demo").innerHTML = numero1;}
+
+function pistelaskuri() {
+
 }
