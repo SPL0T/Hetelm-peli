@@ -13,6 +13,27 @@ let numero4 = "";
 let points = "50";
 var pelaaja ="";
 pistenäyttö.innerText = points;
+let lockvalue1 = "0";
+let lockvalue2 = "0";
+let lockvalue3 = "0";
+let lockvalue4 = "0";
+
+
+function locking1() {
+    lockvalue1 = "1";
+}
+
+function locking2() {
+    lockvalue2 = "1";
+}
+
+function locking3() {
+    lockvalue3 = "1";
+}
+
+function locking4() {
+    lockvalue4 = "1";
+}
 
 function nimi() {
     pelaaja = prompt("Anna nimesi");
