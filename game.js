@@ -13,8 +13,8 @@ var pelaaja ="";
 
 function nimi() {
     pelaaja = prompt("Anna nimesi");
-    nameblock.innerText = "Pelaaja: " + pelaaja
-    console.log(pelaaja)
+    nameblock.innerText = "Pelaaja: " + pelaaja;
+    console.log(pelaaja);
 }
 
 function spin() {
