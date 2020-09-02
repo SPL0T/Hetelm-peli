@@ -3,28 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hedelmäpeli</title>
+    <title>Hetelmäpeli</title>
     <link rel="stylesheet" type="text/css"
     href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Monoton&display=swap" rel="stylesheet"> 
 </head>
 <body onload="nimi()">
-    <h1>Slot machine</h1>
+    <div id="page">
+        <div id="header">
+            <p id="logo"><span class="gradient-text">hetelmä</span><span id="fontchange" class="color">Peli</span></p>
+    
+            <p id="name">Pelaaja:</p>
+        </div>
 
-    <h2 id="name"></h2>
-    <p id="saldo"></p>
-    <button>Lisää 2€</button>
-    <button>Lisää 1€</button>
-    <button>Lisää 0.50€</button>
-    <button>Lisää 0.20€</button>
-<button type="button" onclick="spin()">Spin Here!</button>
-<p id="f1"></p>
-    <button type="lock1" onclick="locking1()">Lukitse</button>
-<p id="f2"></p>
-    <button type="lock2" onclick="locking2()">Lukitse</button>
-<p id="f3"></p>
-    <button type="lock3" onclick="locking3()">Lukitse</button>
-<p id="f4"></p>
-    <button type="lock4" onclick="locking4()">Lukitse</button>
-<script src="game.js"></script> 
+        <p id="saldo"></p>
+        <button>Lisää 2€</button>
+        <button>Lisää 1€</button>
+        <button>Lisää 0.50€</button>
+        <button>Lisää 0.20€</button>
+        <button type="button" onclick="spin()">Spin Here!</button>
+        <p id="f1"></p>
+        <button type="lock1" onclick="locking1()">Lukitse</button>
+        <p id="f2"></p>
+        <button type="lock2" onclick="locking2()">Lukitse</button>
+        <p id="f3"></p>
+        <button type="lock3" onclick="locking3()">Lukitse</button>
+        <p id="f4"></p>
+        <button type="lock4" onclick="locking4()">Lukitse</button>
+        <script src="game.js"></script> 
+    </div>
 </body>
 </html>
