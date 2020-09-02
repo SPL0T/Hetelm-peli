@@ -39,7 +39,7 @@ function locking4() {
 
 function nimi() {
     pelaaja = prompt("Anna nimesi");
-    nameblock.innerText = "Pelaaja: " + pelaaja;
+    nameblock.innerText += pelaaja;
     console.log(pelaaja);
 }
 
