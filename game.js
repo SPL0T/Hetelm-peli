@@ -3,7 +3,7 @@ var f2 = document.querySelector("#f2");
 var f3 = document.querySelector("#f3");
 var f4 = document.querySelector("#f4");
 var nameblock = document.querySelector("#name");
-var pistenäyttö = document.querySelector("#pisteet");
+var saldonaytto = document.querySelector("#saldo");
 var panos = document.querySelector("#panos")
 
 let playerName= "";
@@ -11,21 +11,15 @@ let numero1 = "";
 let numero2 = "";
 let numero3 = "";
 let numero4 = "";
-let points = "50";
+let saldo = "50";
 var pelaaja ="";
-pistenäyttö.innerText = points;
+saldonaytto.innerText = saldo;
 let lockvalue1 = "0";
 let lockvalue2 = "0";
 let lockvalue3 = "0";
 let lockvalue4 = "0";
 let bet = panos.innerText;
-let num = 0;
-setInterval(function(){ console.log(num); }, 1000);
-onclick = betupdater()
-onkeyup = betupdater()
-function betupdater() {
-    let num = panos.value;
-}
+
 
 function locking1() {
     lockvalue1 = "1";
