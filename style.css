@@ -81,20 +81,29 @@ Header
 /*
 Pistenäyttö ja saldo
 */
-#pistejasaldo{
-    border-radius: 40px;
-    background-color: aqua;
-    margin: 15px 20px;
-    padding: 2px;
+#gridcontainer{
     display: grid;
     grid-template-columns: 70% 30%;
 }
+#pistejasaldo{
+    grid-column: 1 / 3;
+    border-radius: 40px;
+    background-color: rgb(56, 0, 0);
+    margin: 15px 20px;
+    padding: 2px;
+}
 
 .naytto{
-    background-color: pink;
+    grid-column: 1;
+    background-color: rgb(155, 0, 0);
     font-family: 'Cute Font', cursive;
     font-size: 70px;
     padding: 10px;
-    margin: 0 15px;
+    margin: 2px 15px;
     border-radius: 10px;
+}
+
+#saldo{
+    color: rgb(231, 0, 0);
+    text-shadow: 0 0 2px rgb(231, 0, 0);
 }
