@@ -83,24 +83,22 @@ Pistenäyttö ja saldo
 */
 #gridcontainer{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 70px auto;
     border-radius: 40px;
     background-color: rgb(56, 0, 0);
     margin: 15px 20px;
 }
-#pistejasaldo{
-    grid-column: 1;
-    height: 50px;
-}
 
 .naytto{
     grid-column: 1;
+    grid-row: 1;
     background-color: rgb(155, 0, 0);
     font-family: 'Cute Font', cursive;
-    font-size: 70px;
-    padding: 10px;
-    margin: 2px 15px;
-    border-radius: 10px;
+    font-size: 80px;
+    padding: 14px 8px;
+    margin: 10px 15px;
+    border-radius: 15px;
 }
 
 #saldo{
@@ -108,10 +106,21 @@ Pistenäyttö ja saldo
     text-shadow: 0 0 2px rgb(231, 0, 0);
 }
 
+#info1{
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 20px;
+    margin: 0 15px;
+    padding: 0 8px;
+    font-style: italic;
+    text-align: center;
+}
+
 .raha{
     margin: 8px 0;
     grid-column: 2;
+    grid-row: 1 / 2;
     border: none;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
