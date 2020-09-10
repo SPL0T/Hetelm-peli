@@ -1,10 +1,10 @@
-const f1 = document.querySelector("#f1");
+const f1 = document.querySelector(".f1");
 const f2 = document.querySelector("#f2");
 const f3 = document.querySelector("#f3");
 const f4 = document.querySelector("#f4");
 const nameblock = document.querySelector("#name");
 const saldonaytto = document.querySelector("#saldo");
-const panos = document.querySelector("#panos")
+const panos = document.querySelector("#panos");
 
 let playerName= "";
 let numero1;
@@ -25,6 +25,8 @@ function screenupdate() {
     panos.innerText = bet
     saldonaytto.innerText = saldo;
 }
+
+function imgupdate()
 
 
 function locking1() {
@@ -74,7 +76,7 @@ poggers()
 function hedelma1() {
     numero1 = Math.floor((Math.random() * 4) + 1);
     console.log(numero1)
-    f1.innerHTML = numero1;}
+    }
 
 function hedelma2() {
     numero2 = Math.floor((Math.random() * 4) + 1);

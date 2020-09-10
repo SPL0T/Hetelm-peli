@@ -140,7 +140,7 @@ Pistenäyttö ja saldo
 }
 
 #e1{
-    background-image: url(/Kuvat/1e.png);
+    background-image: url(/kuvat/1e.png);
     background-size: 70px;
     padding: 35px;
     border-radius: 35px;
@@ -151,7 +151,7 @@ background-color: #e5ac00;
 }
 
 #e2{
-    background-image: url(/Kuvat/2e.png);
+    background-image: url(/kuvat/2e.png);
     background-size: 70px;
     padding: 35px;
     border-radius: 35px;
