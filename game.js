@@ -1,24 +1,30 @@
-var f1 = document.querySelector("#f1");
-var f2 = document.querySelector("#f2");
-var f3 = document.querySelector("#f3");
-var f4 = document.querySelector("#f4");
-var nameblock = document.querySelector("#name");
-var saldonaytto = document.querySelector("#saldo");
-var panos = document.querySelector("#panos")
+const f1 = document.querySelector("#f1");
+const f2 = document.querySelector("#f2");
+const f3 = document.querySelector("#f3");
+const f4 = document.querySelector("#f4");
+const nameblock = document.querySelector("#name");
+const saldonaytto = document.querySelector("#saldo");
+const panos = document.querySelector("#panos")
 
 let playerName= "";
 let numero1;
 let numero2;
 let numero3;
 let numero4;
-let saldo = "50";
-var pelaaja ="";
-saldonaytto.innerText = saldo;
+let saldo = 50;
+let pelaaja ="";
 let lockvalue1;
 let lockvalue2;
 let lockvalue3;
 let lockvalue4;
-let bet = panos.innerText;
+let bet = 0;
+screenupdate()
+
+/* Screen Update Function */
+function screenupdate() {
+    panos.innerText = bet
+    saldonaytto.innerText = saldo;
+}
 
 
 function locking1() {
@@ -94,4 +100,24 @@ function poggers() {
         console.log("3333! Poggers")}
     else if(lockvalue1 && lockvalue2 && lockvalue3 && lockvalue4 === 4) {
         console.log("4444! Poggers")}
+    else {console.log("mitä vittua")}
+}
+
+/* Betting functions */
+function e1() {
+    if(saldo > 0) {
+    saldo -= 1
+    bet += 1;
+    console.log(bet);
+    screenupdate();}
+    else {alert("Sinulla ei ole tarpeeksi rahaa");}
+}
+
+function e2() {
+    if(saldo > 1 ) {
+    saldo -= 2;
+    bet += 2;
+    console.log(bet);
+    screenupdate();}
+    else {alert("Sinulla ei ole tarpeeksi rahaa");}
 }
