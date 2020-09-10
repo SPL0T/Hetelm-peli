@@ -83,11 +83,12 @@ Pistenäyttö ja saldo
 */
 #gridcontainer{
     display: grid;
-    grid-template-columns: 35% 35% 30%;
+    grid-template-columns: 37.2% 37.2% auto;
     grid-template-rows: 70px auto;
     border-radius: 40px;
     background-color: rgb(56, 0, 0);
     margin: 15px 20px;
+    padding: 0 15px 0 0;
 }
 
 #saldo{
@@ -122,8 +123,8 @@ Pistenäyttö ja saldo
     grid-column: 1;
     grid-row: 2;
     font-size: 20px;
-    margin: 0 15px;
-    padding: 0 8px;
+    margin: 0 0 0 15px;
+    padding: 0 0 0 8px;
     font-style: italic;
     text-align: center;
 }
@@ -132,28 +133,19 @@ Pistenäyttö ja saldo
     grid-column: 2;
     grid-row: 2;
     font-size: 20px;
-    margin: 0 15px;
-    padding: 0 8px;
+    margin: 0 15px 0 0;
+    padding: 0 8px 0 0;
     font-style: italic;
     text-align: center;
-}
-
-.raha{
-    margin: 8px 0;
-    grid-column: 3;
-    grid-row: 1 / 2;
-    border: none;
-    width: 60px;
-    height: 60px;
 }
 
 #e1{
     background-image: url(/Kuvat/1e.png);
     background-size: 70px;
     padding: 35px;
-    border-radius: 40px;
-background-color: #b39005;
-    border-color: #b39005;
+    border-radius: 35px;
+background-color: #e5ac00;
+    border-color: #e5ac00;
     border-width: 2px;
     margin: 10px 0;
 }
@@ -162,9 +154,18 @@ background-color: #b39005;
     background-image: url(/Kuvat/2e.png);
     background-size: 70px;
     padding: 35px;
-    border-radius: 40px;
-background-color: #b39005;
-    border-color: #b39005;
+    border-radius: 35px;
+background-color: #e5ac00;
+    border-color: #e5ac00;
     border-width: 2px;
+    margin: 10px 0;
+}
+
+#reset{
+    padding: 31px;
+    border-radius: 35px;
+background-color: #B21D00;
+    border-color: #383838;
+    border-width: 6px;
     margin: 10px 0;
 }

@@ -121,3 +121,9 @@ function e2() {
     screenupdate();}
     else {alert("Sinulla ei ole tarpeeksi rahaa");}
 }
+
+function reset() {
+    saldo += bet
+    bet = 0
+    screenupdate()
+}
