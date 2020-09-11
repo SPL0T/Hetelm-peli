@@ -18,6 +18,7 @@ let lockvalue2;
 let lockvalue3;
 let lockvalue4;
 let bet = 0;
+let x = 1
 screenupdate()
 
 /* Screen Update Function */
@@ -26,8 +27,18 @@ function screenupdate() {
     saldonaytto.innerText = saldo;
 }
 
-function imgupdate()
-
+function imgupdate(){
+    if(numero1 == 1) {
+        f1.src = "/kuvat/omena.png";}
+    else if(numero1 == 2) {
+        f1.src = "/kuvat/paaryna.png";}
+    else if(numero1 == 3) {
+        f1.src = "/kuvat/kirsikka.png";}
+    else if(numero1 == 4) {
+        f1.src = "/kuvat/vesimelooni.png";}
+    else {
+        console.log("vittu")}
+}
 
 function locking1() {
     if(numero1 != null) {
@@ -64,12 +75,16 @@ function nimi() {
     console.log(pelaaja);
 }
 
-function spin() {
+
+function spin2
+
+/*function spin() {
 hedelma1()
 hedelma2()
 hedelma3()
 hedelma4()
 poggers()
+imgupdate()
 }
 
 
@@ -91,7 +106,7 @@ function hedelma3() {
 function hedelma4() {
     numero4 = Math.floor((Math.random() * 4) + 1);
     console.log(numero4)
-    f4.innerHTML = numero4;}
+    f4.innerHTML = numero4;}*/
 
 function poggers() {
     if(lockvalue1 && lockvalue2 && lockvalue3 && lockvalue4 === 1) {
