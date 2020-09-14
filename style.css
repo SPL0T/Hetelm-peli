@@ -169,3 +169,16 @@ background-color: #B21D00;
     border-width: 6px;
     margin: 10px 0;
 }
+
+#slots{
+    text-align: center;
+}
+
+.slot{
+    margin: 0 8px;
+    padding: 40px 0;
+    background: rgb(0,0,0);
+background: linear-gradient(rgb(128, 128, 128) 0%, rgb(255,255,255) 18%, rgb(255,255,255) 82%, rgb(128,128,128) 100%);
+border: 7px solid;
+border-radius: 7px;
+}
