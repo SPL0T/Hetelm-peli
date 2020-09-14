@@ -1,4 +1,4 @@
-const f1 = document.querySelector(".f1");
+const f1 = document.querySelector("#f1");
 const f2 = document.querySelector("#f2");
 const f3 = document.querySelector("#f3");
 const f4 = document.querySelector("#f4");
@@ -7,10 +7,7 @@ const saldonaytto = document.querySelector("#saldo");
 const panos = document.querySelector("#panos");
 
 let playerName= "";
-let numero1;
-let numero2;
-let numero3;
-let numero4;
+let numero = 0;
 let saldo = 50;
 let pelaaja ="";
 let lockvalue1;
@@ -19,26 +16,55 @@ let lockvalue3;
 let lockvalue4;
 let bet = 0;
 let x = 1
-screenupdate()
+screenupdate();
 
 /* Screen Update Function */
 function screenupdate() {
     panos.innerText = bet
     saldonaytto.innerText = saldo;
+    /* Temporary */
+    f3.innerHTML = numero[2];
+    f4.innerHTML = numero[3];
 }
 
 function imgupdate(){
-    if(numero1 == 1) {
+    if(numero[0] == 1) {
         f1.src = "/kuvat/omena.png";}
-    else if(numero1 == 2) {
+    else if(numero[0] == 2) {
         f1.src = "/kuvat/paaryna.png";}
-    else if(numero1 == 3) {
+    else if(numero[0] == 3) {
         f1.src = "/kuvat/kirsikka.png";}
-    else if(numero1 == 4) {
+    else if(numero[0] == 4) {
         f1.src = "/kuvat/vesimelooni.png";}
-    else {
-        console.log("vittu")}
-}
+
+    if(numero[1] == 1) {
+        f2.src = "/kuvat/omena.png";}
+    else if(numero[1] == 2) {
+        f2.src = "/kuvat/paaryna.png";}
+    else if(numero[1] == 3) {
+        f2.src = "/kuvat/kirsikka.png";}
+    else if(numero[1] == 4) {
+        f2.src = "/kuvat/vesimelooni.png";}
+
+    if(numero[2] == 1){
+        f3.src = "/kuvat/omena.png";}
+    else if(numero[2] == 2) {
+        f3.src = "/kuvat/paaryna.png";}
+    else if(numero[2] == 3) {
+        f3.src = "/kuvat/kirsikka.png";}
+    else if(numero[2] == 4) {
+        f3.src = "/kuvat/vesimelooni.png";}
+
+    if(numero[3] == 1){
+        f4.src = "/kuvat/omena.png";}
+    else if(numero[3] == 2) {
+        f4.src = "/kuvat/paaryna.png";}
+    else if(numero[3] == 3) {
+        f4.src = "/kuvat/kirsikka.png";}
+    else if(numero[3] == 4) {
+        f4.src = "/kuvat/vesimelooni.png";}}
+
+
 
 function locking1() {
     if(numero1 != null) {
@@ -74,11 +100,14 @@ function nimi() {
     nameblock.innerText += pelaaja;
     console.log(pelaaja);
 }
-
-
-function spin2
-
-/*function spin() {
+function spin2() {
+        numero = Array.from({length: 4}, () => Math.floor(Math.random() * 4 + 1));
+        console.log(numero);
+        console.log(numero[3]);
+        screenupdate();
+        imgupdate()
+}
+function spin() {
 hedelma1()
 hedelma2()
 hedelma3()
@@ -86,27 +115,6 @@ hedelma4()
 poggers()
 imgupdate()
 }
-
-
-function hedelma1() {
-    numero1 = Math.floor((Math.random() * 4) + 1);
-    console.log(numero1)
-    }
-
-function hedelma2() {
-    numero2 = Math.floor((Math.random() * 4) + 1);
-    console.log(numero2)
-    f2.innerHTML = numero2;}
-
-function hedelma3() {
-    numero3 = Math.floor((Math.random() * 4) + 1);
-    console.log(numero3)
-    f3.innerHTML = numero3;}
-
-function hedelma4() {
-    numero4 = Math.floor((Math.random() * 4) + 1);
-    console.log(numero4)
-    f4.innerHTML = numero4;}*/
 
 function poggers() {
     if(lockvalue1 && lockvalue2 && lockvalue3 && lockvalue4 === 1) {
