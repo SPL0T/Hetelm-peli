@@ -6,69 +6,42 @@ const nameblock = document.querySelector("#name");
 const saldonaytto = document.querySelector("#saldo");
 const panos = document.querySelector("#panos");
 
+let fruits = [f1, f2, f3, f4];
 let playerName= "";
 let numero = 0;
 let saldo = 50;
 let pelaaja ="";
-let lockvalue1;
-let lockvalue2;
-let lockvalue3;
-let lockvalue4;
+let lockvalue = [4, 4, 4, 4];
 let bet = 0;
-let x = 1
+let x;
 screenupdate();
 
 /* Screen Update Function */
 function screenupdate() {
-    panos.innerText = bet
+    panos.innerText = bet;
     saldonaytto.innerText = saldo;
     /* Temporary */
     f3.innerHTML = numero[2];
     f4.innerHTML = numero[3];
 }
 
-function imgupdate(){
-    if(numero[0] == 1) {
-        f1.src = "/kuvat/omena.png";}
-    else if(numero[0] == 2) {
-        f1.src = "/kuvat/paaryna.png";}
-    else if(numero[0] == 3) {
-        f1.src = "/kuvat/kirsikka.png";}
-    else if(numero[0] == 4) {
-        f1.src = "/kuvat/vesimelooni.png";}
-
-    if(numero[1] == 1) {
-        f2.src = "/kuvat/omena.png";}
-    else if(numero[1] == 2) {
-        f2.src = "/kuvat/paaryna.png";}
-    else if(numero[1] == 3) {
-        f2.src = "/kuvat/kirsikka.png";}
-    else if(numero[1] == 4) {
-        f2.src = "/kuvat/vesimelooni.png";}
-
-    if(numero[2] == 1){
-        f3.src = "/kuvat/omena.png";}
-    else if(numero[2] == 2) {
-        f3.src = "/kuvat/paaryna.png";}
-    else if(numero[2] == 3) {
-        f3.src = "/kuvat/kirsikka.png";}
-    else if(numero[2] == 4) {
-        f3.src = "/kuvat/vesimelooni.png";}
-
-    if(numero[3] == 1){
-        f4.src = "/kuvat/omena.png";}
-    else if(numero[3] == 2) {
-        f4.src = "/kuvat/paaryna.png";}
-    else if(numero[3] == 3) {
-        f4.src = "/kuvat/kirsikka.png";}
-    else if(numero[3] == 4) {
-        f4.src = "/kuvat/vesimelooni.png";}}
-
-
+function imgupdate2(){
+    for(x=0; x < 4; x++) {
+    if(numero[x] == 1) {
+        fruits[x].src = "/kuvat/omena.png";}
+    else if(numero[x] == 2) {
+        fruits[x].src = "/kuvat/paaryna.png";}
+    else if(numero[x] == 3) {
+        fruits[x].src = "/kuvat/kirsikka.png";}
+    else if(numero[x] == 4) {
+        fruits[x].src = "/kuvat/vesimelooni.png";}
+    else {
+        fruits[x].src = "/kuvat/vesimelooni.png";}
+}}
 
 function locking1() {
-    if(numero1 != null) {
-        lockvalue1 = numero1}
+    if(numero[0] != null) {
+        lockvalue[0] = numero[0]}
     else {
         console.log("variable was either null or something else is shit")
     }}
@@ -83,16 +56,16 @@ function locking2() {
 
 function locking3() {
     if(numero3 != null) {
-        lockvalue3 = numero3}
+        lockvalue3 = numero3;}
     else {
-        console.log("variable was either null or something else is shit")
+        console.log("variable was either null or something else is shit");
     }}
 
 function locking4() {
-    if(numero4 != null) {
-        lockvalue4 = numero4}
+    if(numero4 != null) {;
+        lockvalue4 = numero4;}
     else {
-        console.log("variable was either null or something else is shit")
+        console.log("variable was either null or something else is shit");
     }}
 
 function nimi() {
@@ -105,15 +78,7 @@ function spin2() {
         console.log(numero);
         console.log(numero[3]);
         screenupdate();
-        imgupdate()
-}
-function spin() {
-hedelma1()
-hedelma2()
-hedelma3()
-hedelma4()
-poggers()
-imgupdate()
+        imgupdate2();
 }
 
 function poggers() {
