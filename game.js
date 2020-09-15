@@ -112,6 +112,10 @@ function e2() {
     else {alert("Sinulla ei ole tarpeeksi rahaa");}
 }
 
+function turn() {
+    
+}
+
 function reset() {
     saldo += bet
     bet = 0
