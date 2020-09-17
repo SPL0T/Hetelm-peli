@@ -82,13 +82,13 @@ function spin2() {
 }
 
 function poggers() {
-    if(lockvalue1 && lockvalue2 && lockvalue3 && lockvalue4 === 1) {
+    if(lockvalue[0] && lockvalue[1] && lockvalue[2] && lockvalue[3] === 1) {
         console.log("1111! Poggers")}
-    else if(lockvalue1 && lockvalue2 && lockvalue3 && lockvalue4 === 2) {
+    else if(lockvalue[0] && lockvalue[1] && lockvalue[2] && lockvalue[3] === 2) {
         console.log("2222! Poggers")}
-    else if(lockvalue1 && lockvalue2 && lockvalue3 && lockvalue4 === 3) {
+    else if(lockvalue[0] && lockvalue[1] && lockvalue[2] && lockvalue[3] === 3) {
         console.log("3333! Poggers")}
-    else if(lockvalue1 && lockvalue2 && lockvalue3 && lockvalue4 === 4) {
+    else if(lockvalue[0] && lockvalue[1] && lockvalue[2] && lockvalue[3] === 4) {
         console.log("4444! Poggers")}
     else {console.log("mitä vittua")}
 }
@@ -113,7 +113,11 @@ function e2() {
 }
 
 function turn() {
-    
+    if(bet > 0) {
+        spin2();
+        poggers();}
+    else {
+        alert("et ole laittanut yhtään panosta")}
 }
 
 function reset() {
