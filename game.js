@@ -35,17 +35,6 @@ function imgupdate2(){
                 fruits[x].src = "/kuvat/vesimelooni.png";}
             else {
                 fruits[x].src = "/kuvat/vesimelooni.png";}}
-        else {
-            if(lockvalue[x] == 1) {
-                fruits[x].src = "/kuvat/omena.png";}
-            else if(lockvalue[x] == 2) {
-                fruits[x].src = "/kuvat/paaryna.png";}
-            else if(lockvalue[x] == 3) {
-                fruits[x].src = "/kuvat/kirsikka.png";}
-            else if(numero[x] == 4) {
-                fruits[x].src = "/kuvat/vesimelooni.png";}
-            else {
-                fruits[x].src = "/kuvat/vesimelooni.png";}}
 }}
 
 /* Locking number */
@@ -113,9 +102,9 @@ function e2() {
 
 function turn() {
     if(bet > 0) {
+        bet = 0;
         spin2();
         poggers();
-        bet = 0;
         screenupdate;}
     else {
         alert("et ole laittanut yhtään panosta")}
