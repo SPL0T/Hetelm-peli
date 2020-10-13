@@ -105,7 +105,6 @@ function e1() {
 
 function e2() {
     if(saldo > 1 ) {
-    saldo -= 2;
     bet += 2;
     console.log(bet);
     screenupdate();}
@@ -115,7 +114,9 @@ function e2() {
 function turn() {
     if(bet > 0) {
         spin2();
-        poggers();}
+        poggers();
+        bet = 0;
+        screenupdate;}
     else {
         alert("et ole laittanut yhtään panosta")}
 }
