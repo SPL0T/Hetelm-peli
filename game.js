@@ -14,6 +14,7 @@ let pelaaja ="";
 let lockvalue = [0, 0, 0, 0];
 let bet = 0;
 let x;
+let turn = 0;
 screenupdate();
 imgupdate2();
 /* Screen Update Function */
@@ -63,7 +64,7 @@ function nimi() {
     console.log(pelaaja);
 }
 
-function spin2() {
+function spin() {
         numero = Array.from({length: 4}, () => Math.floor(Math.random() * 4 + 1));
         console.log(numero);
         screenupdate();
@@ -82,7 +83,9 @@ function poggers() {
     else {console.log("mitä vittua")}
 }
 
-/* Betting functions */
+/*
+Betting functions
+*/
 function e1() {
     if(saldo > 0) {
     saldo -= 1
@@ -100,18 +103,22 @@ function e2() {
     else {alert("Sinulla ei ole tarpeeksi rahaa");}
 }
 
-function turn() {
-    if(bet > 0) {
-        bet = 0;
-        spin2();
-        poggers();
-        screenupdate;}
-    else {
-        alert("et ole laittanut yhtään panosta")}
-}
-
 function reset() {
     saldo += bet
     bet = 0
     screenupdate()
+}
+
+function game() {
+    if(bet > 0) {
+        bet = 0;
+        turn += 1;
+        console.log(turn)
+        spin();
+        poggers();
+        screenupdate;}
+    else if(turn = 2)
+        console.log("toimi")
+    else {
+        alert("et ole laittanut yhtään panosta")}
 }
