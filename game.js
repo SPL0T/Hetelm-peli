@@ -111,14 +111,16 @@ function reset() {
 
 function game() {
     if(bet > 0) {
+        if(turn = 0) {
+        
+        }
+        else {
         bet = 0;
         turn += 1;
         console.log(turn)
         spin();
         poggers();
-        screenupdate;}
-    else if(turn = 2)
-        console.log("toimi")
+        screenupdate;}}
     else {
         alert("et ole laittanut yhtään panosta")}
 }
