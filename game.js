@@ -14,7 +14,7 @@ let pelaaja ="";
 let lockvalue = [0, 0, 0, 0];
 let bet = 0;
 let x;
-let turn = 0;
+let turn = 1;
 screenupdate();
 imgupdate2();
 /* Screen Update Function */
@@ -39,19 +39,6 @@ function imgupdate2(){
 }}
 
 /* Locking number */
-function locking1() {
-    locking(x=0)
-    }
-function locking2() {
-    locking(x=1)
-    }
-function locking3() {
-    locking(x=2)
-    }
-function locking4() {
-    locking(x=3)
-    }
-
     function locking() {
         lockvalue[x] = numero[x];
         console.log(lockvalue[x]);
@@ -80,7 +67,7 @@ function poggers() {
         console.log("3333! Poggers")}
     else if(lockvalue[0] && lockvalue[1] && lockvalue[2] && lockvalue[3] === 4) {
         console.log("4444! Poggers")}
-    else {console.log("mitä vittua")}
+    else {}
 }
 
 /*
@@ -90,7 +77,6 @@ function e1() {
     if(saldo > 0) {
     saldo -= 1
     bet += 1;
-    console.log(bet);
     screenupdate();}
     else {alert("Sinulla ei ole tarpeeksi rahaa");}
 }
@@ -98,7 +84,6 @@ function e1() {
 function e2() {
     if(saldo > 1 ) {
     bet += 2;
-    console.log(bet);
     screenupdate();}
     else {alert("Sinulla ei ole tarpeeksi rahaa");}
 }
@@ -109,18 +94,48 @@ function reset() {
     screenupdate()
 }
 
-function game() {
+function moneycheck() {
     if(bet > 0) {
-        if(turn = 0) {
+        game();
         
+    }
+    else {
+        alert("et ole laittanut yhtään panosta")}
+}
+
+function fcheck() {
+    for(x=0; x < 4; x++) {
+        if(lockvalue[x] == 0){
+            lockvalue[x] = numero[x];
+            console.log(lockvalue)
         }
         else {
+            console.log("e toiminu")
+        }
+    }
+}
+
+function game() {
+    if(turn == 1) {
         bet = 0;
         turn += 1;
         console.log(turn)
         spin();
+        screenupdate;
+        console.log("paska")
+    }
+    else if(turn == 2) {
+        bet = 0;
+        console.log(turn)
+        spin();
+        screenupdate;
+        console.log("testi")
+        turn = turn + 1;
+        console.log(turn)
+        fcheck();
         poggers();
-        screenupdate;}}
+
+    }
     else {
-        alert("et ole laittanut yhtään panosta")}
-}
+    console.log("vittu")
+    screenupdate;}}
