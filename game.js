@@ -102,8 +102,13 @@ function moneycheck() {
     if(turn == 1 && bet > 0) {
         game();
     }
-    else if(turn == 1 %% bet <= 0) {
-        alert("et ole laittanut yhtään panosta")}
+    else if(turn == 1 && bet <= 0) {
+        alert("et ole laittanut yhtään panosta");
+    }
+    else {
+        game();
+        console.log("else");
+    }
 }
 
 function fcheck() {
