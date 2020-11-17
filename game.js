@@ -5,6 +5,7 @@ const f4 = document.querySelector("#f4");
 const nameblock = document.querySelector("#name");
 const saldonaytto = document.querySelector("#saldo");
 const panos = document.querySelector("#panos");
+const vpanos = document.querySelector("#vpanos");
 
 let fruits = [f1, f2, f3, f4];
 let playerName= "";
@@ -13,6 +14,7 @@ let saldo = 50;
 let pelaaja ="";
 let lockvalue = [0, 0, 0, 0];
 let bet = 0;
+let lbet = 0;
 let x;
 let turn = 1;
 screenupdate();
@@ -21,6 +23,7 @@ imgupdate2();
 function screenupdate() {
     panos.innerText = bet;
     saldonaytto.innerText = saldo;
+    vpanos.innerText = lbet;
 }
 
 function imgupdate2(){
@@ -83,6 +86,7 @@ function e1() {
 
 function e2() {
     if(saldo > 1 ) {
+    saldo -= 2;
     bet += 2;
     screenupdate();}
     else {alert("Sinulla ei ole tarpeeksi rahaa");}
@@ -95,11 +99,10 @@ function reset() {
 }
 
 function moneycheck() {
-    if(bet > 0) {
+    if(turn == 1 && bet > 0) {
         game();
-        
     }
-    else {
+    else if(turn == 1 %% bet <= 0) {
         alert("et ole laittanut yhtään panosta")}
 }
 
@@ -115,10 +118,23 @@ function fcheck() {
     }
 }
 
+function clrlock() {
+    for(x=0; x < 4; x++) {
+        if(lockvalue[x] != 0){
+            lockvalue[x] = 0;
+            console.log(lockvalue)
+        }
+        else {
+            console.log("e toiminu2")
+        }
+    }
+}
+
 function game() {
     if(turn == 1) {
+        lbet = bet;
         bet = 0;
-        turn += 1;
+        turn = 2;
         console.log(turn)
         spin();
         screenupdate;
@@ -130,11 +146,11 @@ function game() {
         spin();
         screenupdate;
         console.log("testi")
-        turn = turn + 1;
+        turn = 1;
         console.log(turn)
         fcheck();
         poggers();
-
+        clrlock();
     }
     else {
     console.log("vittu")
