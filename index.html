@@ -7,37 +7,43 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Dancing+Script&family=Monoton&display=swap" rel="stylesheet"> 
 </head>
-<body onload="">
+<body onload="nimi()">
     <div id="page">
         <div id="header">
             <p id="logo"><span class="gradient-text">hetelmä</span><span id="fontchange" class="color">Peli</span></p>
             <p id="name">Pelaaja:<br></p>
         </div>
-        <div id="gridcontainer">
+        <div id="infopaneeli">
                 <p id="saldo" class="naytto"></p>
                 <p id="panos"></p>
                 <p id="vpanos"></p>
+                <p id="vvoitto"></p>
+                <p id="mvoitto"></p>
                 <p id="info1" class="teksti">Saldo</p>
                 <p id="info2" class="teksti">Panos</p>
                 <p id="info3" class="teksti">Viime Panos</p>
+                <p id="info4" class="teksti">Viime Voitto</p>
+                <p id="info5" class="teksti">Isoin Voitto</p>
             <div>
                 <button type="button" onclick="e1()" id="e1"></button>
                 <button type="button" onclick="e2()" id="e2"></button>
                 <button type="button" onclick="reset()" id="reset"></button>
             </div>
-    </div>
-    <div id="slots">
-        <img src="/kuvat/omena.png" width="192px" id="f1" class="slot">
-        <img src="/kuvat/omena.png" width="192px" id="f2" class="slot">
-        <img src="/kuvat/omena.png" width="192px" id="f3" class="slot">
-        <img src="/kuvat/omena.png" width="192px" id="f4" class="slot">
-    </div>
-        <button type="button" onclick="moneycheck()">Spin Here!</button>
-        <button type="lock1" onclick="locking(x = 0)">Lukitse</button>
-        <button type="lock2" onclick="locking(x = 1)">Lukitse</button>
-        <button type="lock3" onclick="locking(x = 2)">Lukitse</button>
-        <button type="lock4" onclick="locking(x = 3)">Lukitse</button>
-        <script src="game.js"></script> 
+        </div>
+        <div id="slots">
+            <img src="/kuvat/omena.png" width="192px" id="f1" class="slot">
+            <img src="/kuvat/omena.png" width="192px" id="f2" class="slot">
+            <img src="/kuvat/omena.png" width="192px" id="f3" class="slot">
+            <img src="/kuvat/omena.png" width="192px" id="f4" class="slot">
+        </div>
+        <div id="napit">
+            <button id="spinner" class="button" onclick="moneycheck()">Spin Here!</button>
+            <button id="lock1" class="button" onclick="locking(x = 0)">Lukitse</button>
+            <button id="lock2" class="button" onclick="locking(x = 1)">Lukitse</button>
+            <button id="lock3" class="button" onclick="locking(x = 2)">Lukitse</button>
+            <button id="lock4" class="button" onclick="locking(x = 3)">Lukitse</button>
+            <script src="game.js"></script> 
+        </div>
     </div>
 </body>
 </html>
